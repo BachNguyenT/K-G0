@@ -238,7 +238,7 @@ export default {
   },
   methods: {
     handleSubmit() {
-      const isFormValid = this.noErrors && this.allFieldsFilled;
+      const isFormValid = this.noErrors() && this.allFieldsFilled();
       if (isFormValid) {
         const formData = {
           fname: this.fname,
@@ -254,7 +254,7 @@ export default {
           donation: this.donation,
         };
         localStorage.setItem("donationFormData", JSON.stringify(formData));
-        console.log("Data saved to local storage:", formData);
+        console.log("Data saved to local storage:", formData, this.errors);
 
         this.showPopup = true;
 
@@ -289,7 +289,6 @@ export default {
         this.gender = value;
       }
       this.validate(name, value);
-      console.log(name, value, this.expiration);
     },
     validate(name, value) {
       switch (name) {
@@ -376,10 +375,20 @@ export default {
       sliderValue.style.left = `calc(${percentage}% - ${0.8 * percentage}px)`;
     },
     noErrors() {
-      return Object.entries(this.errors).filter(Boolean).length === 0;
+      return Object.values(this.errors).every(value => value === '');
     },
     allFieldsFilled() {
-      return Object.values(this.values).every((value) => value.trim() !== "");
+      return (
+        this.fname.trim() !== "" &&
+        this.lname.trim() !== "" &&
+        this.company.trim() !== "" &&
+        this.email.trim() !== "" &&
+        this.phone !== "" &&
+        this.gender !== "" &&
+        this.cardno !== "" &&
+        this.expiration !== "" &&
+        this.cvn !== ""
+      );
     },
   },
   mounted() {
