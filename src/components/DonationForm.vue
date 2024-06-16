@@ -380,7 +380,7 @@ export default {
     },
     updateThumbPosition() {
       const sliderValue = this.$refs.sliderValue;
-      const percentage = (this.donation)/10;
+      const percentage = this.donation / 10;
       sliderValue.style.left = `calc(${percentage}% - ${0.8 * percentage}px)`;
     },
   },
@@ -538,5 +538,11 @@ export default {
   word-spacing: 10px;
   pointer-events: none;
   color: #fff;
+}
+
+@media (max-width: 1200px) {
+  .form-check-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 </style>
