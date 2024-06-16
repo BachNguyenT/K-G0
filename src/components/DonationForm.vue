@@ -236,14 +236,6 @@ export default {
       this.updateThumbPosition();
     },
   },
-  computed: {
-    noErrors() {
-      return Object.entries(this.errors).filter(Boolean).length === 0;
-    },
-    allFieldsFilled() {
-      return Object.values(this.values).every((value) => value.trim() !== "");
-    },
-  },
   methods: {
     handleSubmit() {
       const isFormValid = this.noErrors && this.allFieldsFilled;
@@ -383,9 +375,17 @@ export default {
       const percentage = this.donation / 10;
       sliderValue.style.left = `calc(${percentage}% - ${0.8 * percentage}px)`;
     },
+    noErrors() {
+      return Object.entries(this.errors).filter(Boolean).length === 0;
+    },
+    allFieldsFilled() {
+      return Object.values(this.values).every((value) => value.trim() !== "");
+    },
   },
   mounted() {
     this.updateThumbPosition();
+    this.noErrors();
+    this.allFieldsFilled();
   },
 };
 </script>
