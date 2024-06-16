@@ -1,5 +1,8 @@
 <template>
   <div class="app">
+    <div class="notsupported">
+      <span class="invalidtext">Warning: This resolution is not supported</span>
+    </div>
     <div class="container">
       <div class="img_container">
         <img class="img" v-bind:src="require('./assets/bg.jpeg')" />
@@ -27,6 +30,8 @@ export default {
 }
 
 .app {
+  min-height: 100vh;
+  background-color: black;
 }
 
 .image-container {
@@ -45,7 +50,7 @@ export default {
 }
 
 .container {
-  background-color: black;
+  /* background-color: black; */
   display: flex;
   flex-direction: row;
   padding: 2rem 0;
@@ -53,11 +58,26 @@ export default {
   margin: 0 auto;
 }
 
-@media (max-width: 1000px) {
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
+.notsupported {
+  display: none;
 }
 
+@media (max-width: 1000px) {
+  .notsupported {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: block;
+    z-index: 999;
+    text-align: center;
+    align-content: center;
+    color: red;
+    font-size: 25px;
+  }
+
+  .container {
+    display: none;
+  }
+}
 </style>

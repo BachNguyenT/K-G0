@@ -521,6 +521,7 @@ export default {
 }
 
 .warning {
+  margin-top: 0px;
   color: red;
   position: absolute;
 }
