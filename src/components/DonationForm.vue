@@ -415,6 +415,14 @@ export default {
   vertical-align: super;
 }
 
+.form-control {
+  height: 51px;
+}
+
+.form-select {
+  height: 51px;
+}
+
 .form-check-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -450,22 +458,6 @@ export default {
   transform: translateY(0.2rem);
 }
 
-.button {
-  margin-top: 2.5rem;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  column-gap: 2rem;
-}
-
-.form-control {
-  height: 51px;
-}
-
-.form-select {
-  height: 51px;
-}
-
 .range {
   margin-top: 1rem;
 }
@@ -480,6 +472,28 @@ export default {
   border-radius: 5px;
   outline: none;
   background-color: #329e5e;
+}
+
+.range .sliderValue {
+  position: relative;
+  background-color: transparent;
+  height: 30px;
+  width: 80px;
+  top: -44px;
+  line-height: 55px;
+  align-content: center;
+  text-align: center;
+  word-spacing: 10px;
+  pointer-events: none;
+  color: #fff;
+}
+
+.button {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  column-gap: 2rem;
 }
 
 .btn {
@@ -524,20 +538,6 @@ export default {
   margin-top: 0px;
   color: red;
   position: absolute;
-}
-
-.range .sliderValue {
-  position: relative;
-  background-color: transparent;
-  height: 30px;
-  width: 80px;
-  top: -44px;
-  line-height: 55px;
-  align-content: center;
-  text-align: center;
-  word-spacing: 10px;
-  pointer-events: none;
-  color: #fff;
 }
 
 @media (max-width: 1200px) {
