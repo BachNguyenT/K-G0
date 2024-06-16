@@ -280,6 +280,16 @@ export default {
       this.expiration = "";
       this.cvn = "";
       this.donation = 500;
+      this.errors.FirstName = false;
+      this.errors.LastName = false;
+      this.errors.Company = false;
+      this.errors.Email = false;
+      this.errors.Phone = false;
+      this.errors.Gender = false;
+      this.errors.CardNo = false;
+      this.errors.Expiration = false;
+      this.errors.CVN = false;
+      
       localStorage.removeItem("donationFormData");
       console.log("Form data reset and cleared from local storage.");
     },
