@@ -394,6 +394,7 @@ export default {
 .form {
   background-color: white;
   padding: 4rem;
+  padding-bottom: 0.5rem;
   overflow: scroll;
 }
 .form_container {
