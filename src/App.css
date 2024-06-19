@@ -1,0 +1,63 @@
+#app {
+  font-family: Poppins;
+  font-size: 14px;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: black;
+}
+
+.container {
+  display:flex;
+  flex-direction: row;
+  column-width: auto;
+  padding: 2rem 0;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.image-container {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: calc(100vh - 6rem);
+  max-width: 10vw;
+  width: fit-content; */
+  min-width: none;
+}
+
+.img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.form {
+  /* min-width: 70vw; */
+}
+
+.notsupported {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .notsupported {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: block;
+    z-index: 999;
+    text-align: center;
+    align-content: center;
+    color: red;
+    font-size: 25px;
+  }
+
+  .container {
+    display: none;
+  }
+}

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import DonationForm from "./components/DonationForm.vue";
+import DonationForm from "./components/Form/DonationForm.vue";
 
 export default {
   name: "App",
@@ -23,61 +23,4 @@ export default {
 };
 </script>
 
-<style>
-#app {
-  font-family: Poppins;
-  font-size: 14px;
-}
-
-.app {
-  min-height: 100vh;
-  background-color: black;
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  max-height: 100vh - 6rem;
-}
-
-.img {
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-  object-position: center;
-}
-
-.container {
-  /* background-color: black; */
-  display: flex;
-  flex-direction: row;
-  padding: 2rem 0;
-  height: 100vh;
-  margin: 0 auto;
-}
-
-.notsupported {
-  display: none;
-}
-
-@media (max-width: 1000px) {
-  .notsupported {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    display: block;
-    z-index: 999;
-    text-align: center;
-    align-content: center;
-    color: red;
-    font-size: 25px;
-  }
-
-  .container {
-    display: none;
-  }
-}
-</style>
+<style scoped src="./App.css"></style>
