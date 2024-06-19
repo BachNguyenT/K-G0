@@ -122,13 +122,13 @@
       <div class="form_wrapper">
         <label for="Expiration" class="form-label">EXPIRATION</label>
         <input
-          type="month"
+          type="date"
           class="form-control"
           id="Expiration"
           name="Expiration"
           v-model="values.expiration"
           required
-          pattern="^\d{4}-\d{2}$"
+          
         />
         <div class="invalid-feedback">Please provide a valid Expiration</div>
       </div>
