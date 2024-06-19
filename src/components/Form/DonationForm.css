@@ -1,159 +1,163 @@
 .form {
-    background-color: white;
-    padding: 4rem;
-    padding-bottom: 0.5rem;
-    overflow: scroll;
-  }
-  .form_container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 4rem;
-    row-gap: 1rem;
-  }
-  .form-label {
-    text-align: left;
-    font-family: Poppins;
-    font-weight: 700;
-  }
-  
-  .form-label:after {
-    content: "*";
-    color: red;
-    font-size: 13px;
-    vertical-align: super;
-  }
-  
-  .form-control {
-    height: 51px;
-  }
-  
-  .form-select {
-    height: 51px;
-  }
-  
+  background-color: white;
+  padding: 4rem;
+  padding-bottom: 0.5rem;
+  overflow: scroll;
+}
+.form_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 4rem;
+  row-gap: 1rem;
+}
+.form-label {
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 700;
+}
+
+.form-label:after {
+  content: "*";
+  color: red;
+  font-size: 13px;
+  vertical-align: super;
+}
+
+.form-control {
+  height: 51px;
+}
+
+.form-select {
+  height: 51px;
+}
+
+.form-check-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 4rem;
+  margin-top: 0.7rem;
+  padding-right: 3rem;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  column-gap: 0.7rem;
+  font-weight: 600;
+}
+
+.form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #fff;
+  border-color: #dadada;
+}
+
+.form-check-input:checked {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #329e5e;
+  border-color: #329e5e;
+}
+
+.form-check-label {
+  display: inline-block;
+  position: relative;
+  transform: translateY(0.2rem);
+}
+
+.form-control.date {
+  display: flex;
+  align-items: center;
+}
+
+.range {
+  margin-top: 1rem;
+}
+
+#DonateUs::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 80px;
+  height: 30px;
+  transform: translateY(-20%);
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  background-color: #329e5e;
+}
+
+.range .sliderValue {
+  position: relative;
+  background-color: transparent;
+  height: 30px;
+  width: 80px;
+  top: -44px;
+  line-height: 55px;
+  align-content: center;
+  text-align: center;
+  word-spacing: 10px;
+  pointer-events: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+.button {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  column-gap: 2rem;
+}
+
+.btn {
+  font-weight: 700;
+  width: 8rem;
+  height: 3rem;
+  border: none;
+}
+
+.btn.btn-primary {
+  background-color: #329e5e;
+}
+
+.btn.btn-custom {
+  border: 2px solid rgb(181, 181, 181);
+  opacity: 50%;
+}
+
+.popup {
+  position: absolute;
+  width: 25rem;
+  height: 4.5rem;
+  border-radius: 6px;
+  margin-top: 3rem;
+  margin-left: 30%;
+  opacity: 90%;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  z-index: 999;
+}
+
+.success {
+  background-color: #329e5e;
+  padding: 0.8rem 3rem;
+}
+
+.failed {
+  background-color: red;
+  padding: 0.8rem 1rem;
+}
+
+.warning {
+  margin-top: 0px;
+  color: red;
+  position: absolute;
+}
+
+@media (max-width: 1200px) {
   .form-check-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 4rem;
-    margin-top: 0.7rem;
-    padding-right: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-  
-  .form-check {
-    display: flex;
-    align-items: center;
-    column-gap: 0.7rem;
-    font-weight: 600;
-  }
-  
-  .form-check-input {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #fff;
-    border-color: #dadada;
-  }
-  
-  .form-check-input:checked {
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #329e5e;
-    border-color: #329e5e;
-  }
-  
-  .form-check-label {
-    display: inline-block;
-    position: relative;
-    transform: translateY(0.2rem);
-  }
-  
-  .range {
-    margin-top: 1rem;
-  }
-  
-  #DonateUs::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 80px;
-    height: 30px;
-    transform: translateY(-20%);
-    cursor: pointer;
-    border-radius: 5px;
-    outline: none;
-    background-color: #329e5e;
-  }
-  
-  .range .sliderValue {
-    position: relative;
-    background-color: transparent;
-    height: 30px;
-    width: 80px;
-    top: -44px;
-    line-height: 55px;
-    align-content: center;
-    text-align: center;
-    word-spacing: 10px;
-    pointer-events: none;
-    color: #fff;
-    font-weight: 600;
-  }
-  
-  .button {
-    margin-top: 2.5rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    column-gap: 2rem;
-  }
-  
-  .btn {
-    font-weight: 700;
-    width: 8rem;
-    height: 3rem;
-    border: none;
-  }
-  
-  .btn.btn-primary {
-    background-color: #329e5e;
-  }
-  
-  .btn.btn-custom {
-    border: 2px solid rgb(181, 181, 181);
-    opacity: 50%;
-  }
-  
-  .popup {
-    position: absolute;
-    width: 25rem;
-    height: 4.5rem;
-    border-radius: 6px;
-    margin-top: 3rem;
-    margin-left: 30%;
-    opacity: 90%;
-    text-align: center;
-    font-size: 16px;
-    color: black;
-    z-index: 999;
-  }
-  
-  .success {
-    background-color: #329e5e;
-    padding: 0.8rem 3rem;
-  }
-  
-  .failed {
-    background-color: red;
-    padding: 0.8rem 1rem;
-  }
-  
-  .warning {
-    margin-top: 0px;
-    color: red;
-    position: absolute;
-  }
-  
-  @media (max-width: 1200px) {
-    .form-check-wrapper {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-  }
-  
+}

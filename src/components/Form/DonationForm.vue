@@ -123,12 +123,11 @@
         <label for="Expiration" class="form-label">EXPIRATION</label>
         <input
           type="date"
-          class="form-control"
+          class="form-control date"
           id="Expiration"
           name="Expiration"
           v-model="values.expiration"
           required
-          
         />
         <div class="invalid-feedback">Please provide a valid Expiration</div>
       </div>
